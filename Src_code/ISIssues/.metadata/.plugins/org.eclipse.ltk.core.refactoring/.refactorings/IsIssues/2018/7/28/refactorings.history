@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;IsIssues/lib/PROGRESS_DATADIRECT_CONNECT_JDBC_5.1.4.HOTFIX (1).jar&apos; to &apos;PROGRESS_DATADIRECT_CONNECT_JDBC_5.1.4.HOTFIX.jar&apos;" description="Rename resource &apos;PROGRESS_DATADIRECT_CONNECT_JDBC_5.1.4.HOTFIX (1).jar&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="lib/PROGRESS_DATADIRECT_CONNECT_JDBC_5.1.4.HOTFIX (1).jar" name="PROGRESS_DATADIRECT_CONNECT_JDBC_5.1.4.HOTFIX.jar" stamp="1531461317612" updateReferences="true"/>
+</session>

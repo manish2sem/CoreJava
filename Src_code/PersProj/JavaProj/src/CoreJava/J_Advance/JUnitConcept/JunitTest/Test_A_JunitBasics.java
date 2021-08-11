@@ -1,0 +1,28 @@
+package CoreJava.J_Advance.JUnitConcept.JunitTest;
+
+import static org.junit.Assert.*;
+import org.junit.Test;
+import CoreJava.J_Advance.JUnitConcept.JunitSrc.A_JunitBasics;
+
+/**
+ * 	- Create a java test class say TestJunit.java. [Test is optional Junit-4 onwards]
+ * 	- Add a test method testPrintMessage() to your test class.[Test is optional Junit-4 onwards]
+ * 	- Add an Annotaion @Test to method testPrintMessage().[Mandatory]
+ * 	- Implement the test condition and check the condition using assertEquals API of Junit.
+ * 
+ * To execute this test class create runner class.
+ *
+ */
+
+public class Test_A_JunitBasics {
+
+	String message = "Hello World"; 
+
+	A_JunitBasics messageUtil = new A_JunitBasics(message); 
+
+	@Test 
+	public void testPrintMessage() { 
+		assertEquals(message,messageUtil.printMessage()); 
+	}
+
+}

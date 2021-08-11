@@ -1,0 +1,19 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified" >
+	<xs:element name="ExtendedSettings">	
+	  <xs:complexType >
+		 <xs:sequence>
+				<xs:element name="UpdateSettings" type="Update" minOccurs="0" maxOccurs="1"/>
+				<xs:element name="DeleteSettings" type="Delete" minOccurs="0" maxOccurs="1"/>
+			</xs:sequence>
+		</xs:complexType> 
+	  </xs:element>
+	
+	<xs:simpleType name="Update">
+		<xs:list itemType="xs:string" />
+	</xs:simpleType>
+
+	<xs:simpleType name="Delete">
+		<xs:list itemType="xs:string" />
+	</xs:simpleType>
+
+</xs:schema>

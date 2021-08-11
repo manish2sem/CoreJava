@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.eclipse.jdt.launching.localJavaApplication">
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
+<listEntry value="/IsIssues/src/SSLIssue/SSLConnection.java"/>
+</listAttribute>
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
+<listEntry value="1"/>
+</listAttribute>
+<stringAttribute key="org.eclipse.debug.ui.ATTR_CAPTURE_IN_FILE" value="C:\Users\makum\Desktop\Bhanu\DD\SSL_logDataDirect1.txt"/>
+<stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="SSLIssue.SSLConnection"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="IsIssues"/>
+<stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value="-Djavax.net.debug=ssl -Dcom.sun.net.ssl.checkRevocation=false"/>
+</launchConfiguration>

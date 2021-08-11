@@ -1,0 +1,89 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified" >
+	<xs:element name="ResourceSettings">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Resources" type="Resources" minOccurs="0" maxOccurs="1"/>
+				<xs:element name="StoreSettings" type="StoreSettings" minOccurs="0" maxOccurs="1"/>
+				<xs:element name="ExtendedSettings" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>						
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="Resources">
+		<xs:sequence>
+			<xs:element name="ServerThreadPool" type="ServerThreadPool" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="Session" type="Session" minOccurs="0" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ServerThreadPool">
+		<xs:sequence>
+			<xs:element name="MaximumThreads" type="xs:positiveInteger" default="75" nillable="false"/>
+			<xs:element name="MinimumThreads" type="xs:positiveInteger" default="10" nillable="false"/>
+			<xs:element name="AvailableThreadsWarningThreshold" type="Percentage" default="15"/>
+			<xs:element name="SchedulerThreadThrottle" type="Percentage" default="75"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="Session">
+		<xs:sequence>
+			<xs:element name="SessionTimeout" type="xs:positiveInteger" default="10" nillable="false"/>
+			<xs:element name="EnableStatefulSessionLimit" type="xs:boolean" default="true"/>
+			<xs:element name="MaximumStatefulSessions" type="xs:positiveInteger" nillable="false"/>
+			<xs:element name="AvailableStatefulSessionWarningThreshold" type="Percentage" default="25"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="StoreSettings">
+		<xs:sequence>
+			<xs:element name="DefaultDocumentStore" type="DocumentDefaultStore" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="TriggerDocumentStore" type="TriggerDocumentStore" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="OutboundDocumentStore" type="OutboundDocumentStore" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="XARecoverystore" type="XARecoverystore" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="BrokerConfigured" type="xs:boolean" minOccurs="1" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="DocumentDefaultStore">
+		<xs:sequence>
+			<xs:element name="StoreLocation" type="xs:string" default="DocumentStore"/>
+			<xs:element name="InitialStoreSize" type="xs:positiveInteger" default="25" nillable="false"/>
+			<xs:element name="Capacity" type="xs:nonNegativeInteger" minOccurs="0" default="10"/>
+			<xs:element name="RefillLevel" type="xs:nonNegativeInteger" minOccurs="0" default="4"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="TriggerDocumentStore">
+		<xs:sequence>
+			<xs:element name="StoreLocation" type="xs:string" default="DocumentStore"/>
+			<xs:element name="InitialStoreSize" type="xs:positiveInteger" default="25"/>
+			<xs:element name="InboundDocumentHistory" type="xs:string" minOccurs="0" default="10"/>
+			<xs:element name="InboundClientSideQueuing" type="OnOffString" minOccurs="0" />
+			<xs:element name="User" type="xs:string" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="OutboundDocumentStore">
+		<xs:sequence>
+			<xs:element name="MaximumDocumentsToSendPerTransaction" type="xs:positiveInteger" default="25" minOccurs="0" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="XARecoverystore">
+		<xs:sequence>
+			<xs:element name="StoreLocation" type="xs:string" default="XAStore"/>
+			<xs:element name="InitialStoreSize" type="xs:positiveInteger" default="10"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="Percentage">
+		<xs:restriction base="xs:integer">
+			<xs:minInclusive value="0"/>
+			<xs:maxInclusive value="100"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="nonEmptyString">
+		<xs:restriction base="xs:string">
+			<xs:minLength value="1"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="OnOffString">
+		<xs:restriction base="xs:string">
+			<xs:minLength value="1"/>
+			<xs:enumeration value="On"/>
+			<xs:enumeration value="Off"/>
+			<xs:enumeration value="Not Available"/>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>

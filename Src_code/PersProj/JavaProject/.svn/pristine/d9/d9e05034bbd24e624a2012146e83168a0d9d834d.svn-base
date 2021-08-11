@@ -1,0 +1,88 @@
+package CoreJava.J_Essential.xceptionHandling.userdefinedexception;
+
+/**
+ * Keep the following points in mind when writing your own exception classes:
+ * - All exceptions must be a child of Throwable.
+ * - If you want to write a checked exception that is AUTOMATICALLY ENFORCED BY THE HANDLE OR DECLARE RULE,
+ * 		 you need to extend the Exception class. 
+ * - If you want to write a runtime exception, you need to extend the RuntimeException class.
+ * 
+ * You will never directly extends Throwable because then it will be neither a checked nor a runtime exception.
+ * 
+ * Its two step process :
+ * 1. Define the exception by extending exception/runtime
+ * 2. declare it in method signature to handle it.
+ *
+ */
+
+public class MyCheckedExceptionTest{
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		RandomGenerator randomGenerator = new RandomGenerator();
+		
+		try {
+			randomGenerator.throwOnMinus();
+		}catch (MyCheckedException e){
+			e.printMsg();
+			System.out.println("cheched Exception occured");
+		}
+
+	}
+
+}
+
+class RandomGenerator{
+	int x;
+	int y;
+	
+	public RandomGenerator(){
+	//	x = (int) (Math.random() * 100 + 1);
+	//	y = (int) (Math.random() * 100 + 1);		
+	}
+	
+	public void throwOnMinus() throws MyCheckedException{ //step 2.a this makes it checked exception
+//	public void throwOnMinus(){ //step 2.a this makes it checked exception
+		do {
+			
+			x = (int) (Math.random() * 100 + 1);
+			y = (int) (Math.random() * 100 + 1);	
+			int z = x*3-y;
+			
+			System.out.println("Z : "+z);
+			
+			if (z<0) {
+				throw new MyCheckedException(); // step 2.b
+			}
+		}while(true);
+	}
+	
+	
+}
+
+//class MyCheckedException extends Exception { // step1
+//checked exception is AUTOMATICALLY ENFORCED BY THE HANDLE OR DECLARE RULE
+
+class MyCheckedException extends Exception { // step1
+	
+	public MyCheckedException(){
+		super("checked exception");
+	}
+	
+	void printMsg(){
+		System.out.println("cheched Exception is thrown");
+	}	
+}
+
+/**
+ * So, how do we know that some method throws an exception that we have to catch?
+Just as a method must specify what type and how many arguments it accepts and
+what is returned, the exceptions that a method can throw must be declared (unless
+the exceptions are subclasses of RuntimeException). The list of thrown exceptions
+is part of a method's public interface. The throws keyword is used as follows to list
+the exceptions that a method can throw:
+*/

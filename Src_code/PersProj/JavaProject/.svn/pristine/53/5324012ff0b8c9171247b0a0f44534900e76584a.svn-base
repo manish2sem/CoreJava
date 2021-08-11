@@ -1,0 +1,6 @@
+CoreJava.J_Essential.IO.srlzation.Z_CustomSrlzn.MyClass
+long serialVersionUID : 1
+int i : 1
+double d : 2.3
+class java.lang.String staticStr : Manish
+class java.lang.String normString : Kumar

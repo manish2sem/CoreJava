@@ -1,0 +1,17 @@
+package Java8.B_IFmethods;
+
+public class Mainz {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		MyClass myClass = new MyClass();
+		myClass.log("Manish");
+		
+		Interface1 if1 = new MyClass();
+		Interface1.print("Manish");
+		
+		if1.log("Main");
+
+	}
+
+}

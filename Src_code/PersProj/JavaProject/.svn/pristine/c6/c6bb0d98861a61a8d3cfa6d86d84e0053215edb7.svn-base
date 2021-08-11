@@ -1,0 +1,41 @@
+package Java8.B_IFmethods;
+
+/**
+ * From Java 8, interfaces are enhanced to have method with implementation. 
+ * We can use default and static keyword to create interfaces with method implementation.
+ * 
+ *  If any class in the hierarchy has a method with same signature, 
+ *  then default methods become irrelevant and compiler will throw exception 
+
+
+ * @author Manish
+ *
+ */
+
+public interface Interface1 {
+	void method1(String str);
+
+	default void log(String str){
+		System.out.println("I1 logging::"+str);
+	}
+	
+	default void log2(String str){
+		System.out.println("I1 logging::"+str);
+	}
+
+	static void print(String str){
+		System.out.println("Printing IF1 "+str);
+	}
+	
+	static void print2(String str){
+		System.out.println("Printing IF1 "+str);
+	}
+
+	//trying to override Object method gives compile time error as
+	//"A default method cannot override a method from java.lang.Object"
+
+	//	default String toString(){
+	//		return "i1";
+	//	}
+
+}

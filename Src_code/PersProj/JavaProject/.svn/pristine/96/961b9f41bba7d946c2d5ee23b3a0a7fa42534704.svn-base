@@ -1,0 +1,14 @@
+package Java8.B_IFmethods;
+
+public interface Interface2 {
+	void method2();
+	
+	static void print(String str){
+		System.out.println("Printing IF2"+str);
+	}
+
+	default void log(String str){
+		System.out.println("I2 logging::"+str);
+	}
+
+}

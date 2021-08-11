@@ -1,0 +1,30 @@
+package Java8.D_LamdaExp;
+/**
+ * 
+ * lambda expressions implements functionalIF and 
+ * 	avoid bulky anonymous class implementation.
+ * 
+ * Since there is only one abstract function in the functional interfaces, 
+ * 	there is no confusion in applying the lambda expression to the method.
+ * 
+ * Compare the Lamda expression with anonymous function:
+ *   - Method body (business logic) remain same.
+ *   - Lambda Expressions syntax is (argument) -> (body). 
+ *   - body is for implemantation of abstract function defined in functional interface.
+ * @author Manish
+ *
+ */
+public class LamdaExp {
+
+	A_FuctionalIF anonymousImpl = (int i) ->{
+		System.out.println("abstract method implemented : Lambda Exp " +i);		
+	};
+	
+	
+
+	public static void main(String[] args) {
+		LamdaExp lamdaExp = new LamdaExp();
+		lamdaExp.anonymousImpl.method2(10);
+	}
+
+}

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="java.lang.Thread"/>
+<fullyQualifiedTypeName name="java.lang.System"/>
+<fullyQualifiedTypeName name="java.security.SecureRandom"/>
+<fullyQualifiedTypeName name="io.searchbox.client.JestClientFactory"/>
+<fullyQualifiedTypeName name="io.searchbox.client.JestClient"/>
+<fullyQualifiedTypeName name="io.searchbox.client.config.HttpClientConfig.Builder"/>
+<fullyQualifiedTypeName name="io.searchbox.client.config.HttpClientConfig"/>
+<fullyQualifiedTypeName name="io.searchbox.core.Get.Builder"/>
+<fullyQualifiedTypeName name="io.searchbox.core.Get"/>
+<fullyQualifiedTypeName name="io.searchbox.client.JestResult"/>
+<fullyQualifiedTypeName name="java.text.NumberFormat"/>
+<fullyQualifiedTypeName name="java.util.Locale"/>
+<fullyQualifiedTypeName name="java.util.Random"/>
+<fullyQualifiedTypeName name="java.util.regex.Pattern"/>
+<fullyQualifiedTypeName name="org.json.JSONObject"/>
+<fullyQualifiedTypeName name="org.json.JSONArray"/>
+<fullyQualifiedTypeName name="JASON.StrToJason"/>
+</qualifiedTypeNameHistroy>

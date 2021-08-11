@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;JavaProj/src/CoreJava/J_Elementry/enumConcepts/Test.java&apos; to &apos;AuthenticationType.java&apos;" description="Rename resource &apos;Test.java&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/CoreJava/J_Elementry/enumConcepts/Test.java" name="AuthenticationType.java" stamp="1576292891091" updateReferences="true"/>
+</session>

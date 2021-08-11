@@ -1,0 +1,31 @@
+package Java8.B_IFmethods;
+
+/**
+ * In case of conflict (ambiguity) 
+ * implementing class must provide it's own implementation of ambigous method.
+ * 
+ * In this example,
+ * public void log(String str) is ambigous
+ * as it is present (implemented) in both implemented interfaces.
+ * @author Manish
+ *
+ */
+public class MyClass implements Interface1, Interface2{
+	
+	@Override
+	public void method2() {
+	}
+
+	@Override
+	public void method1(String str) {
+	}
+
+	//MyClass won't compile without having it's own log() implementation
+	//@Override
+	
+	public void log(String str){
+		System.out.println("MyClass logging::"+str);
+		Interface1.print("abc");
+	}
+
+}

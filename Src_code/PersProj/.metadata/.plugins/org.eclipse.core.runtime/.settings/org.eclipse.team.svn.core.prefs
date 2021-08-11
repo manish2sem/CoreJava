@@ -1,0 +1,5 @@
+eclipse.preferences.version=1
+externalMigrateFromAuthorizationDatabase/isMigrated=true
+migrateFromAuthorizationDatabase/isMigrated=true
+repositories/2049f0abdbca0018104593fb65c2d6d5=2049f0abdbca0018104593fb65c2d6d5;http\://svnva.ame.ad.sag\:1818/svn/sag/esb;http\://svnva.ame.ad.sag\:1818/svn/sag/esb;branches;tags;trunk;true;2184ecf7-edf4-4929-a1f8-17a3edb76252;http\://svnva.ame.ad.sag\:1818/svn/sag;;false;;;0
+repositories/301d0fdc1d70001711dcc537085a32df=301d0fdc1d70001711dcc537085a32df;file\:///D\:/SVN/Repo/CoreJavaRepo;file\:///D\:/SVN/Repo/CoreJavaRepo;branches;tags;trunk;true;10c37fb6-5301-0010-bb93-37b9e898dd46;file\:///D\:/SVN/Repo/CoreJavaRepo;;false;;;0

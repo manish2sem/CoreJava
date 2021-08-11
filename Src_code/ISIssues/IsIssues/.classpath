@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jdk1.7.0_51"/>
+	<classpathentry kind="lib" path="lib/jest-0.1.1.jar"/>
+	<classpathentry kind="lib" path="lib/jest-common-0.1.1.jar"/>
+	<classpathentry kind="lib" path="lib/ojdbc6.jar"/>
+	<classpathentry kind="lib" path="SSLlib/simplefan.jar"/>
+	<classpathentry kind="lib" path="lib/java-json.jar"/>
+	<classpathentry kind="lib" path="lib/spm-configuration-common-model-10.3.0-v0022.jar"/>
+	<classpathentry kind="lib" path="lib/PROGRESS_DATADIRECT_CONNECT_JDBC_5.1.4.HOTFIX.jar"/>
+	<classpathentry kind="lib" path="lib/monitor.jar"/>
+	<classpathentry kind="lib" path="lib/dd-cjdbc.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

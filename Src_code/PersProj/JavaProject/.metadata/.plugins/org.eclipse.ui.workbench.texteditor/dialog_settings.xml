@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item key="selection" value="System"/>
+		<list key="findhistory">
+			<item value="System"/>
+			<item value="NetIdentityMethd"/>
+			<item value="getHost"/>
+			<item value="getLoopbackHost"/>
+			<item value="BeerSize"/>
+			<item value="elements"/>
+		</list>
+	</section>
+</section>

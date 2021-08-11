@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="CommonSettings.xsd" />
+	<xs:element name="Group">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Members">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="User" maxOccurs="unbounded"
+								minOccurs="0">
+								<xs:complexType>
+									<xs:attribute type="RestrictedStringType" name="id"
+										use="required" />
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+
+				<!-- <xs:element minOccurs="0" ref="ExtendedProperties" />
+ -->				<xs:any namespace="##any" processContents="skip" minOccurs="0"
+					maxOccurs="unbounded" />
+
+			</xs:sequence>
+			<xs:attribute type="RestrictedStringType" name="id"
+				use="required" />
+		</xs:complexType>
+	</xs:element>
+
+	<xs:simpleType name="RestrictedStringType">
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="255" />
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>	

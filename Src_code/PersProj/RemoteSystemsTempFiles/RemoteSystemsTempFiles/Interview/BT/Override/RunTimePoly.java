@@ -1,0 +1,32 @@
+package Interview.BT.Override;
+
+public class RunTimePoly {
+	public static void main(String[] args) {
+		Creature c1 = new Bird();
+		c1.eat();
+		((Hawk)c1).fly();
+	}
+
+}
+
+
+class Creature {
+	
+	public void eat(){
+		System.out.println("Creature Eating");
+	}
+}
+
+class Bird extends Creature{
+	
+	public void fly(){
+		System.out.println("Bird Flying");
+	}
+}
+
+class Hawk extends Bird{
+	
+	public void hunt(){
+		System.out.println("Hawk Hunting");
+	}
+}

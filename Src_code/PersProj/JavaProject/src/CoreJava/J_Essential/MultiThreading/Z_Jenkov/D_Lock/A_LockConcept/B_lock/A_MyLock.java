@@ -1,0 +1,85 @@
+package CoreJava.J_Essential.MultiThreading.Z_Jenkov.D_Lock.A_LockConcept.B_lock;
+/**
+ * A lock is a thread synchronization mechanism like synchronized blocks.
+ * Locks (and other more advanced synchronization mechanisms) are created using synchronized blocks.
+ * From Java 5 the package CoreJava.java.util.concurrent.locks contains several lock implementations, so you may not have to implement your own locks.
+ * But still it is useful to know the theory behind their implementation.
+ * 
+ * 
+ * Lock are suppose to substitute synchronized stil it is used inside lock() and unlock() methods. WHY?
+ * This is for wait() and notify() methods. As they are called inside synchronized method only.
+ * 
+ */
+
+
+public class A_MyLock {
+
+	private boolean isLocked = false;
+
+	/*public synchronized void lock() throws InterruptedException{
+		while(isLocked){
+			wait();
+		}
+		isLocked = true;
+	}
+
+	public synchronized void unlock(){
+		isLocked = false;
+		notify();
+	}*/
+
+	public void lock() throws InterruptedException{
+		while(isLocked){
+			System.out.println("Waiting for thread");
+			synchronized(this){
+				System.out.println("Inside synchronized block");
+				wait();
+			}
+			System.out.println("Wait is over, got the  thread");
+		}
+		isLocked = true;
+	}
+
+	public void unlock(){
+		isLocked = false;
+		synchronized(this){
+			notify();
+		}
+	}
+
+}
+
+
+/**
+ * To Use :
+ * Inside thread T 
+ * 	B_MyLock.lock()
+ * 		CRITICAL-SECTION
+ *     B_MyLock.unlock()
+ *     
+ * Say two threads T1 and T2 are trying to get into the critical section. And T1 comes first
+ * 	For T1 isLocked = false;
+ * 	so it skips while loop
+ * 	isLocked = true; 
+ * 		and enters into the CRITICAL-Section
+ * 
+ * At this point of time Thread T2 comes and try to get into the critical section. 
+ * 	For T2 isLocked = true;
+ *     and it goes for wait loop.
+ *     
+ * When T1 is done with CRITICAL-SECTION it CALLS unlock() and 
+ * 	sets back isLocked = false so that other thread(T2) can proceed (by breaking while loop).
+ *     and most important calls notify() so waiting thread can become runnable.
+ *     
+ * Notice
+ * 	while(isLocked){
+			wait();
+		}	
+ * This is called a "spin lock".
+ * Here, wait() is inside while loop, bit weird, but to avoid Spurious Wakeup.
+ * Spurious Wakeup: thread may return unexpectedly from the wait() call without having received a notify().
+ * this will rarely occur in practice but still occurs. To guard this spin lock is used.
+ * So whenever(rarely) Spurious Wakeup occurs while condition is checked. 
+ *    
+ * 
+ */

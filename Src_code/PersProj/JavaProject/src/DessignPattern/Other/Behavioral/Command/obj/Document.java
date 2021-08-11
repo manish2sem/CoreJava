@@ -1,0 +1,15 @@
+package DessignPattern.Other.Behavioral.Command.obj;
+
+/**
+ * Independent objects with it's actions
+ * @author Manish
+ *
+ */
+public class Document {  
+	public void open(){  
+		System.out.println("Document Opened");  
+	}  
+	public void save(){  
+		System.out.println("Document Saved");  
+	}  
+}  

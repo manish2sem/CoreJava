@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.eclipse.jdt.launching.localJavaApplication">
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
+<listEntry value="/IsIssues/src/SSLIssue/OrclClntConnect.java"/>
+</listAttribute>
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
+<listEntry value="1"/>
+</listAttribute>
+<stringAttribute key="org.eclipse.debug.ui.ATTR_CAPTURE_IN_FILE" value="C:\Users\makum\Desktop\Bhanu\SSL_logWthtCipher.txt"/>
+<stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="SSLIssue.OrclClntConnect"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="IsIssues"/>
+<stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value="-Djavax.net.debug=ssl -Dcom.sun.net.ssl.checkRevocation=false&#13;&#10;-Djavax.net.ssl.EncryptionMethod=&quot;SSL&quot;&#13;&#10;-Doracle.net.ssl_cipher_suites=SSL_DH_anon_WITH_3DES_EDE_CBC_SHA&#13;&#10;-Dhttps.protocols=TLSv1"/>
+</launchConfiguration>
