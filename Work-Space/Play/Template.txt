@@ -1,0 +1,6 @@
+Play 2.0 comes with a new and really powerful Scala-based template engine.
+Play uses Scala for server-side templating.
+The Application controller renders the views.html.index template.
+views.html.index template is compiled from the app/views/index.scala.html file. 
+
+index template uses the main template (from app/views/main.scala.html) to get a base HTML page:

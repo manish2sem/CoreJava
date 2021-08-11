@@ -1,0 +1,29 @@
+What is database and how to create.
+How to idntify Driver for your database?
+what will be the connection URL for particular driver?
+
+What is the relationship between database and table?
+	can i create table without database?
+	
+Do the programming in JDBC
+	for each snall conceptual element
+		- creating databas
+		- creating table
+		- commit
+		- rollback
+		- batch processing
+		- memcache if available
+		- storedprocedure
+Once concept is clear
+
+Check how Dow design pattern will make the difference
+	how to write the Dow DP?
+How connection pool concept will create the difference and where?
+	how to write the your own connection pool?
+Where hibernet fits togtaher and what flexibility it provides.
+	Install-hibernet and convert above JDBC program into hibernet-driven program.
+	Learn the concepts of hibernet.
+
+
+Can they all be use togather (hibernet, connection-pool, Dow)
+Or hibernet provide features of Dow or/and connection poolinng.

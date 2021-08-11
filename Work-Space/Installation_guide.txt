@@ -1,0 +1,82 @@
+Microsoft Office
+	Run the installer - C:\Manish\Softwares\Standard\Microsoft Office 2007 Enterprise v.12 ENG Final\setup
+	key - C:\Manish\Softwares\Standard\Microsoft Office 2007 Enterprise v.12 ENG Final\key
+	That's it.
+
+java -
+	Run the installer - C:\Manish\Softwares\development\J2EE\jdk-8u11-windows-x64
+	Installed Location - C:\Program Files\Java
+
+Tomcat - 
+	Take the zip file from - C:\Manish\Softwares\development\J2EE\apache-tomcat-7.0.62
+	Extract it at - C:\Applications\apache-tomcat-7.0.62
+	
+	C:\Applications\apache-tomcat-7.0.62\apache-tomcat-7.0.62\bin>startup.bat
+		Neither the JAVA_HOME nor the JRE_HOME environment variable is defined
+		At least one of these environment variable is needed to run this program
+	So defined JAVA_HOME as		
+		Thispc [right click] - properties - Advace System Setting - Env variables - user variable
+			JAVA_HOME = C:\Program Files\Java\jdk1.8.0_11
+	
+	Verify this by running startup.bat and open the browser - http://localhost:8080/
+
+Eclipse - 
+	Take the zip file from - C:\Manish\Softwares\development\J2EE\eclipse-standard-luna-R-win32-x86_64
+	Extract it at - C:\Applications\eclipse-standard-luna-R-win32-x86_64
+	That's All. Click C:\Applications\eclipse-standard-luna-R-win32-x86_64\eclipse\eclipse and start programming.
+	Assumption - As java is installed before eclipse, it would have taken installed jre.
+
+Database - 
+    Oracle-11G
+	run the installer - C:\Manish\Softwares\development\Database\OracleXE112_Win64.zip\DISK1\setup
+	while installing provide password -ruylopez- for "SYS" and SYSTEM database account.
+    
+    sqldeveloper
+        Take the zip file from - C:\Manish\Softwares\development\Database\sqldeveloper-4.0.3.16.84-no-jre.zip
+	Extract it at - C:\Applications\sqldeveloper-4.0.3.16.84-no-jre 
+        run the installer - C:\Applications\sqldeveloper-4.0.3.16.84-no-jre\sqldeveloper\sqldeveloper
+        	enter the full pathname for the JDK, by Browsing - C:\Program Files\Java\jdk1.8.0_11
+
+Solr:
+
+
+J2EE Server :
+	http://www.oracle.com/technetwork/java/javasebusiness/downloads/java-archive-downloads-eesdk-419427.html#j2eesdk-1_4_03-oth-JPR
+	
+
+For load balancing we need
+	- Tomcat 2+ instances
+		-C:\Applications\apache-tomcat-7.0.62
+		-C:\Applications\LoadShare\apache-tomcat-7.0.62_1
+		
+	- Mod-J connector
+	- Apache HTTP server
+
+
+Installing Apache HTTP Server
+	Goto - https://www.apachelounge.com/download/
+		download latest version of HTTP server windows zip ditribution
+		Unzip it into c drive otherwise some settings is reqd
+
+	You need vc++ installed in your system to work apache http server
+		https://www.microsoft.com/en-us/download/details.aspx?id=48145
+	Otherwise - it says "VCRUNTIME14.0dll is missing"
+     Running apache HTTP server:
+	 - open httpd.exe (C:\Apache24\bin) in admin mode (rightclick)
+         - minimise the cmd prompt
+         - type 127.0.0.1 in browser 
+It Works!!!
+
+Download  (mod_jk) connector: 
+http://tomcat.apache.org/download-connectors.cgi
+http://mirror.fibergrid.in/apache/tomcat/tomcat-connectors/jk/binaries/windows/
+download tomcat-connectors-1.2.40-windows-x86_64-httpd-2.4.x.zip
+this zip contains mod_jk.so file.
+put this file into C:\Apache24\modules
+
+Apache http server (mod_jk) communicate with tomcat server through AJP port.
+
+Changes in tomcat instances:
+Change shutdownport
+http conector port 
+AJP conector port 

@@ -1,0 +1,44 @@
+C:\IS_srcCode\ver_100\settings\ac.gradle
+
+gradlew eclipse
+gradlew build
+gradlew clean --refresh-dependencies
+gradlew equinoxAcStartIS
+gradlew equinoxAcStartDebugIS 10033
+
+client
+server
+modules\proxy
+modules-osgi\launcher
+modules\migration
+modules\migration-framework
+server
+command-central\spm-impl
+monitors\cmp-impl
+
+wm-root
+wm-public
+
+gradlew equinoxAcStartIS -x equinoxAcInstallIS -x createInstanceDefault -x javadoc
+
+
+
+
+gradlew clean --refresh-dependencies
+gradlew eclipse
+gradlew equinoxAcStartIS -x javadoc
+gradlew equinoxAcStartDebugIS -x javadoc
+
+
+
+C:\IS_srcCode\ver_912\staging\installs\profiles\IS\bin>startDebugMode.bat
+
+
+
+Administrator
+manage
+
+
+gradlew build -x javadoc
+
+1230206

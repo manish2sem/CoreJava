@@ -1,0 +1,7 @@
+https://en.wikipedia.org/wiki/Thumbnail
+
+https://en.wikipedia.org/wiki/Windows_thumbnail_cache
+
+Thumbnails are reduced-size versions of pictures, used to help in recognizing and organizing them, serving the same role for images as a normal text index does for words. In the age of digital images, visual search engines and image-organizing programs normally use thumbnails, as do most modern operating systems or desktop environments, such as Microsoft Windows, Mac OS X, KDE (Linux) and GNOME (Linux).
+
+The use of the word "thumbnail" in the specific context of computer images as 'a small graphical representation, as of a larger graphic, a page layout, etc.' appears to have been first used in the 1980s

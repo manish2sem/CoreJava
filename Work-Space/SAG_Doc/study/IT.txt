@@ -1,0 +1,22 @@
+domain  :  eur 
+
+eur.ad.sag==> full domain
+
+user id : makum
+
+Welcome@1234 ( w caps )
+
+
+VPN  : barracuda client 
+
+Share folder :  \\banfiler01
+
+RnD share folder : \\banfiler01\rnd$
+
+ticket tool    :  otrs.eur.ad.sag
+
+My home :  \\banfiler01\myhome
+
+
+
+

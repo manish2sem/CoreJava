@@ -1,0 +1,12 @@
+ Integratig Tomcat with project wihtin eclipse ide
+Widow -> Show-view -> others -> Server
+This will open server view
+Click new server and find the destined server from the list.
+Select the server click next
+provide the installed dir location
+click Finish
+This will provide servers project in eclipse projrects.
+
+to include it in project, right click to the project -> properties -> targeted run time ->
+select the tomcat and click finish.
+

@@ -1,0 +1,21 @@
+Symbolic links are basically advanced shortcuts. 
+Create a symbolic link to an individual file or folder, and that link will appear to be the same as the file or folder to Windows.
+
+There are two type of symbolic links: 
+ - Soft symbolic links work similarly to a standard shortcut. When you open a soft link to a folder, you will be redirected to the folder where the files are stored.
+ - Hard link makes it appear as though the file or folder actually exists at the location of the symbolic link.
+Windows  uses the terms “hard link” and “symbolic link” (for soft link).
+
+
+To create symbolic links use the mklink command in a Command Prompt window as Administrator. 
+Locate the “Command Prompt” shortcut in your Start menu, right-click it, and select “Run as Administrator”.
+
+mklink command can create both hard links (known as “hard links” in Windows) and soft links
+ 
+  
+  mklink Link Target - creates a symbolic (soft) link at Link pointing to the file Target 
+  mklink /D Link Target - to create a soft link pointing to a directory Target  
+  mklink /H Link Target - to create a hard link pointing to a file Target  
+  mklink /J Link Target - to create a hard link pointing to a directory
+  
+  Note, Folder/File Link should not present. It should be created newly.

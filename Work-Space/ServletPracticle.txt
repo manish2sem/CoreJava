@@ -1,0 +1,32 @@
+Tomcat 7 or Other Servlet 3.0 Containers
+Give address with @WebServlet
+@WebServlet("/my-address")
+public class MyServlet extends HttpServlet { … }
+– Resulting URL
+• http://hostName/appName/my-address
+• Omit web.xml entirely
+– You are permitted to use web xml even when using You are permitted to use web.xml even when using
+@WebServlet, but the entire file is completely optional.
+
+
+Impact of folder structure chage 
+Controller/Model:
+	No change as the path(URI) through annotation dosen't get change
+	
+HTML/JSP
+	URI called from these (Action) need to be modified in such a way so that it remain same as previous.
+	If URI called is hard-coded then no change.
+	If URI is relative then change is requrd as per below:
+	Post -> <FORM ACTION="show-items" METHOD="POST"> to <FORM ACTION="/show-items" METHOD="POST">
+	Get  -> <form action="random-number">  to <form action="/Servlets/random-number">
+and restart the server. Some times eclipse need to be restarted to make the effect.
+
+In index.html provide the relative path 
+	<li><a href="hello.html">hello.html</a> 
+	<li><a href="htmls/basics/hello.html">hello.html</a> 
+
+index.html is bydefault URL
+i.e. http://localhost:8070/Servlets/ is used to type in brower 
+
+For accessing index_2.html you need to type:
+http://localhost:8070/Servlets/index_2.html

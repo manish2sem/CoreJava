@@ -1,0 +1,41 @@
+Constraints are the rules enforced on data columns on table or on table.
+
+Following are commonly used constraints available in SQL: 
+	NOT NULL Constraint: Ensures that a column cannot have NULL value.
+	DEFAULT Constraint: Provides a default value for a column when none is specified. 
+	UNIQUE Constraint: Ensures that all values in a column are different. 
+	PRIMARY Key: Uniquely identified each rows/records in a database table. 
+	FOREIGN Key: Uniquely identified a rows/records in any another database table. 
+	CHECK Constraint: The CHECK constraint ensures that all values in a column satisfy certain conditions. 
+	INDEX: Use to create and retrieve data from the database very quickly.
+	
+CREATE TABLE table_name (
+	column_name1 DATA_TYPE(no.) Constraint,
+	column_name1 DATA_TYPE(no.) Constraint,
+	column_name1 DATA_TYPE(no.) Constraint,
+	constraints
+	)
+
+CREATE TABLE CUSTOMERS( 
+  ID INT PRIMARY KEY, 
+  NAME VARCHAR (20) NOT NULL, 
+  AGE INT NOT NULL UNIQUE, 
+  ADDRESS CHAR (25), 
+  SALARY DECIMAL (18, 2) DEFAULT 5000.00
+)
+
+insert into CUSTOMERS values (3, 'Manish', 15, 'Indus innova', 3000 )
+insert into CUSTOMERS values (4, 'Manish', 25, '', 3000 )
+insert into CUSTOMERS values (6, 'Manish', 27, null, null)
+
+select * from CUSTOMERS
+
+ALTER TABLE CUSTOMERS MODIFY SALARY DECIMAL (18, 2) DEFAULT 5000.00;
+ALTER TABLE CUSTOMERS ALTER COLUMN SALARY DROP DEFAULT; 
+ALTER TABLE CUSTOMERS MODIFY AGE INT NOT NULL UNIQUE;
+ALTER TABLE CUSTOMERS ADD CONSTRAINT myUniqueConstraint UNIQUE(AGE, SALARY);
+ALTER TABLE CUSTOMERS DROP CONSTRAINT myUniqueConstraint;
+	ALTER TABLE CUSTOMERS DROP INDEX myUniqueConstraint;
+ALTER TABLE CUSTOMER ADD PRIMARY KEY (ID);
+ALTER TABLE CUSTOMERS ADD CONSTRAINT PK_CUSTID PRIMARY KEY (ID, NAME);
+ALTER TABLE CUSTOMERS DROP PRIMARY KEY ;

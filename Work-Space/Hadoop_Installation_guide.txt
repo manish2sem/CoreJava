@@ -1,0 +1,11 @@
+Install Virtual box for Windows10
+	https://www.virtualbox.org/wiki/Downloads
+	VirtualBox 5.1.6 for Windows hosts
+   Virtual box at local
+	C:\Applications\Hadoop\VirtualBox
+
+Download ubuntu 
+	https://www.ubuntu.com/
+	Go to download tab and select for desktop
+	
+go to Start > Control Panel > System (may have to switch to classical view look on left side) > Hardware (Tab) > Device Manager and look for processors if it lists 2 under it then it has 2 processors.

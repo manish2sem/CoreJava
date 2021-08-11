@@ -1,0 +1,5 @@
+session management
+
+Play is stateless.
+
+session in a servlet-based web application is stored on a server side.

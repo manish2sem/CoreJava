@@ -1,0 +1,10 @@
+IS
+	- Understanding IS
+	- Code setup
+	- Build project
+	- Create app using designer
+
+
+OSGI Concepts
+
+

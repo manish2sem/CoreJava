@@ -1,0 +1,38 @@
+^M is a carriage return. 
+
+You should understand a few things first:
+
+CR = \r = Carriage Return
+LF = \n = Line Feed
+
+In DOS, all lines end with a CR/LF combination or \r\n.
+In UNIX, all lines end with a single LF or \n.
+
+The ^M that you are seeing is actually a CR or \r. If you want to test for carraige returns in a file, you want to look for \r.
+
+/usr/bin/dos2unix' utility?
+
+The cause is the difference between how a Windows-based based OS and a Unix based OS store the end-of-line markers.
+
+Windows based operating systems, thanks to their DOS heritage, store an end-of-line as a pair of characters - 0x0D0A (carriage return + line feed). Unix-based operating systems just use 0x0A (a line feed). The ^M you're seeing is a visual representation of 0x0D (a carriage return).
+
+But why ^M? Why the '^'? Why the 'M'? –  uprego Jul 28 at 4:47
+  	 	
+Because it's a "control character". "^" is the visual representation of clicking the control key. Underneath its just specific bytes, the ^ is how the editor represents them. 
+
+
+
+
+
+
+
+
+dos2unix [options] [-c convmode] [-o file ...] [-n infile outfile ...]
+
+
+
+http://stackoverflow.com/questions/64749/m-character-at-end-of-lines
+
+http://stackoverflow.com/questions/2613800/how-to-convert-dos-windows-newline-crlf-to-unix-newline-n-in-bash-script
+
+https://ant.apache.org/manual/Tasks/fixcrlf.html

@@ -1,0 +1,12 @@
+Eclipsification:
+
+C:\Users\Manish\TestPlay\FirstApp>play eclipse
+Java HotSpot(TM) 64-Bit Server VM warning: ignoring option MaxPermSize=256M; sup
+port was removed in 8.0
+[info] Loading project definition from C:\Users\Manish\TestPlay\FirstApp\project
+
+[info] Set current project to FirstApplication (in build file:/C:/Users/Manish/T
+estPlay/FirstApp/)
+[info] About to create Eclipse project files for your project(s).
+[info] Successfully created Eclipse project files for project(s):
+[info] FirstApplication

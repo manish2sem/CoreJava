@@ -1,0 +1,28 @@
+application.conf [conf\]
+
+This is the  file where basic information such as 
+	database connection strings, 
+	log levels, 
+	modules to enable additional functionality, 
+	supported application languages, or 
+	the setting of the application mode 
+is configured.
+
+
+every configuration option follows the scheme:
+# Some comment 
+key = value 
+
+
+adding and configuring modules in order to enhance the basic functionality of Play is part of the application.conf, and each module requires enabling it via defining its path:
+module.foo=${play.path}/modules/foo.
+
+NOTE:
+ from play 1.2 modules are not configured via this mechanism, but via the new dependencies.yml file. You can still configure modules this way, but this is deprecated from then on.
+ 
+ Another important setup is the log level of your application when using log4j-
+ application.log=DEBUG
+ 
+ 
+ application.conf file looks like a properties file, it really is not because of its UTF-8 encoding.
+

@@ -1,0 +1,1 @@
+https://www.mssqltips.com/sqlservertutorial/164/using-try-catch-in-sql-server-stored-procedures/

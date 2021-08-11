@@ -1,0 +1,11 @@
+C:\SAG\SAG912
+
+
+
+Integration Server/server version 
+
+http://svnva.ame.ad.sag:1818/svn/sag/esb/trunk/server/product/config/licenseKey.xml
+
+Uncheck command central.. 
+
+<Installation folder>/profiles/

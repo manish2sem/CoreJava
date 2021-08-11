@@ -1,0 +1,35 @@
+ Controllers
+ 
+ Controllers represent the thin layer between HTTP and business logic. 
+ They are called by the router. 
+ requested resource is mapped to a controller method specified in the conf/routes file.
+ 
+ 
+ public class Application extends Controller {
+ 
+ 	public static void showUser(String id) {
+ 		render();
+	}
+ 
+ }
+ 
+ 
+ Java class work as controller is to have it extend from play.mvc.Controller. 
+ All your actions[Methods] have to be static in order to be executed as controller methods.
+ 
+ 
+ GET /user/{id} Application.showUser
+ 
+ 
+ render() - This method is defined in the controller class and tells the controller to start the rendering phase. 
+ A template is looked up and rendered. 
+ As Play also follows the convention over configuration pattern, a default template location is assumed, which follows an easy naming
+ 
+ 
+ 
+ controller layer should be as thin as possible. 
+ This layer is not for business logic but merely for validation in order to ensure the model layer will only get valid data.
+ 
+
+ 
+ 

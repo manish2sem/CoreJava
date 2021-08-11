@@ -1,0 +1,20 @@
+Any model you define should go into the models package[in the app/models 1directory].
+
+
+public class User extends Model {
+public String login;
+@Required @Email
+public String email;
+}
+
+
+The model[User] class inherits from Model. 
+This is absolutely essential, because it allows you to use the so-called ActiveRecord pattern for querying of data.
+all fields in the example code are public
+
+
+
+EA1B
+
+
+C:\Users\Manish\PlaytestProject\play2torial

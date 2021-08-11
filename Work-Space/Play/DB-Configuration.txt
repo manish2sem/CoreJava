@@ -1,0 +1,30 @@
+Using databases(Oracle) with Play
+
+add driver-specific configuration in your configuration file.
+	db.url=jdbc:oracle:thin:@db01.your.host:1521:tst-db01
+	db.driver=oracle.jdbc.driver.OracleDriver
+	
+Other ting can be done:
+	
+	reusing application server resources
+
+to use datasources provided by the underlying application server. 
+Put the following line in your config file:
+	db=java:/comp/env/jdbc/myDatasource
+	
+configure your connection pool
+	configure your connection pool
+
+
+Using connection pools
+a very important feature to ensure a performant and resource saving link to the database from your application. 
+This means saving resources by not creating a new TCP connection every time you issue a query. 
+Most JDBC drivers come with this out of the box, but you can also tweak the settings in your config file:
+# db.pool.timeout=1000
+# db.pool.maxSize=30
+# db.pool.minSize=10
+
+
+Configuring your JPA dialect
+As Play uses hibernate, you need to specify a hibernate dialect:
+	jpa.dialect=org.hibernate.dialect.Oracle10gDialect
